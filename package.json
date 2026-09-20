@@ -7,12 +7,12 @@
   "author": "Hussain Humaidan",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hussain-humaidan/twinfabric.git"
+    "url": "git+https://github.com/hussain-humaidan/Twin-Fabric.git"
   },
   "bugs": {
-    "url": "https://github.com/hussain-humaidan/twinfabric/issues"
+    "url": "https://github.com/hussain-humaidan/Twin-Fabric/issues"
   },
-  "homepage": "https://github.com/hussain-humaidan/twinfabric#readme",
+  "homepage": "https://github.com/hussain-humaidan/Twin-Fabric#readme",
   "keywords": [
     "digital-twin",
     "bim",

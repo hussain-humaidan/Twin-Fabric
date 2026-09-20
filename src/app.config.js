@@ -36,7 +36,7 @@ export const PRODUCT = {
   fileExtension: '.twinfabric',
   /** AGPL section 13: a network user must be able to reach the source. */
   license: 'AGPL-3.0-only',
-  sourceUrl: 'https://github.com/hussain-humaidan/twinfabric',
+  sourceUrl: 'https://github.com/hussain-humaidan/Twin-Fabric',
   copyright: 'Copyright (C) 2026 Hussain Humaidan and Twinfabric contributors',
 };
 

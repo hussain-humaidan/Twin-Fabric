@@ -115,6 +115,6 @@ Initial working version.
 - Mall building template: 5 halls, 3 rooms, 10 upper rooms, 2 clerks halls,
   11 clerk rooms, roof with plant and mast zones.
 
-[Unreleased]: https://github.com/hussain-humaidan/twinfabric/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/hussain-humaidan/twinfabric/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/hussain-humaidan/twinfabric/releases/tag/v0.1.0
+[Unreleased]: https://github.com/hussain-humaidan/Twin-Fabric/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/hussain-humaidan/Twin-Fabric/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/hussain-humaidan/Twin-Fabric/releases/tag/v0.1.0

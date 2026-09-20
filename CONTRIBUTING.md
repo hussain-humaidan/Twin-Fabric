@@ -7,8 +7,8 @@ be: a new device, a new cable type, or a new building template.
 ## Development setup
 
 ```bash
-git clone https://github.com/hussain-humaidan/twinfabric
-cd twinfabric
+git clone https://github.com/hussain-humaidan/Twin-Fabric
+cd Twin-Fabric
 npm install
 npm run dev          # http://localhost:8123
 ```
