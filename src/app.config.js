@@ -14,10 +14,10 @@
  *
  * Product identity — the ONE place the application names itself.
  *
- * The platform is generic. A Matam, an office, a school or a warehouse is a
+ * The platform is generic. A Mall, an office, a school or a warehouse is a
  * PROJECT that runs inside it, supplied by a template. Nothing in the engine,
- * the data model or the logic layer knows what a Matam is; only
- * `src/model/templates/matam.js` does, and it is just one entry in a registry.
+ * the data model or the logic layer knows what a Mall is; only
+ * `src/model/templates/mall.js` does, and it is just one entry in a registry.
  *
  * Renaming the product is editing this file.
  */
@@ -43,8 +43,8 @@ export const PRODUCT = {
 /**
  * Where a name comes from, so the UI never has to guess:
  *   PRODUCT.name        the software            "Twinfabric"
- *   project.name        this body of work       "Matam Infrastructure Project"
- *   project.building.name  the physical thing   "Matam Al-Zahra"
+ *   project.name        this body of work       "Mall Infrastructure Project"
+ *   project.building.name  the physical thing   "Riverside Mall"
  */
 export const NAMING = {
   productLabel: () => PRODUCT.name,

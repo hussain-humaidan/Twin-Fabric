@@ -345,7 +345,7 @@ export function createApp() {
 
   async function newFromTemplate() {
     let tid = BUILDING_TEMPLATES[0].id;
-    const nameInput = h('input', { type: 'text', value: '', placeholder: 'e.g. Matam Infrastructure Project' });
+    const nameInput = h('input', { type: 'text', value: '', placeholder: 'e.g. Mall Infrastructure Project' });
     nameInput.addEventListener('keydown', (e) => e.stopPropagation());
 
     const list = h('div', { class: 'ports' }, BUILDING_TEMPLATES.map((t) => h('div', {
@@ -393,7 +393,7 @@ export function createApp() {
 
   function openHelp() {
     const dlg = openDialog({
-      title: 'Matam Digital Twin — help', size: 'md',
+      title: `${PRODUCT.name} — help`, size: 'md',
       body: h('div', null,
         h('div', { class: 'hint', style: { marginBottom: '10px' } },
           'Coordinate system: Y up, +X east, +Z south, 1 unit = 1 metre. Every dimension in the seeded building is a PLACEHOLDER — edit it in the Inspector.'),

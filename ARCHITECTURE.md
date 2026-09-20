@@ -11,7 +11,7 @@ Twinfabric (application)
    │    └── Building      the physical structure: levels, walls, slabs, spaces
    │         └── Infrastructure   racks, devices, ports, cables, pathways
    │
-   ├── Templates          matam · office · blank · (community modules)
+   ├── Templates          mall · office · blank · (community modules)
    └── Catalog            device definitions → device instances
 ```
 
@@ -75,7 +75,7 @@ src/
 │   │                    tray penetrations, opening↔space association
 │   └── templates/
 │       ├── index.js     the registry — the platform only ever sees this
-│       ├── matam.js     THE ONLY FILE THAT KNOWS WHAT A MATAM IS
+│       ├── mall.js     THE ONLY FILE THAT KNOWS WHAT A MALL IS
 │       └── generic.js   blank site, two-storey office
 │
 ├── logic/               ← engineering (pure, testable, no Three.js, no DOM)

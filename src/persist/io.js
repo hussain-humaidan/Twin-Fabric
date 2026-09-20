@@ -13,8 +13,8 @@ import { PRODUCT } from '../app.config.js';
 import { toContainer, fromContainer, summarise } from './format.js';
 import { putProject, getProject, listProjects, deleteProject, backend, estimateUsage } from './db.js';
 
-const KEY = 'matam-twin/project';          // legacy store, read once then migrated
-const KEY_SLOTS = 'matam-twin/slots';      // legacy named copies
+const KEY = 'twinfabric/legacy-project';   // pre-IndexedDB store, read once then migrated
+const KEY_SLOTS = 'twinfabric/legacy-slots';
 const KEY_VIEW = 'twinfabric/view';
 const CURRENT = 'current';                 // IndexedDB key for the open project
 

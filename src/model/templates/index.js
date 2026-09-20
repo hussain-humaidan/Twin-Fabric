@@ -8,7 +8,7 @@
  * To add a building type: write a module that exports a build(ids, opts)
  * function and add one entry below. Community templates plug in the same way.
  */
-import { buildMatam } from './matam.js';
+import { buildMall } from './mall.js';
 import { buildBlank, buildOffice } from './generic.js';
 
 /**
@@ -21,11 +21,11 @@ import { buildBlank, buildOffice } from './generic.js';
  */
 export const BUILDING_TEMPLATES = [
   {
-    id: 'matam',
-    name: 'Matam',
+    id: 'mall',
+    name: 'Mall',
     category: 'Community',
     summary: '5 halls and 3 rooms downstairs, 10 rooms plus 2 clerks halls and 11 clerk rooms upstairs, roof with plant and mast zones.',
-    build: buildMatam,
+    build: buildMall,
   },
   {
     id: 'office',
@@ -51,4 +51,4 @@ export function createFromTemplate(templateId, ids, opts) {
   return getTemplate(templateId).build(ids, opts);
 }
 
-export { buildMatam, buildBlank, buildOffice };
+export { buildMall, buildBlank, buildOffice };

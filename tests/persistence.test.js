@@ -68,8 +68,8 @@ describe('.twinfabric container', () => {
   });
 
   it('suggests a filesystem-safe filename', () => {
-    expect(exportFilename({ name: 'Matam Infrastructure Project' }))
-      .toBe('matam-infrastructure-project.twinfabric.json');
+    expect(exportFilename({ name: 'Mall Infrastructure Project' }))
+      .toBe('mall-infrastructure-project.twinfabric.json');
     expect(exportFilename({ name: '' })).toBe('project.twinfabric.json');
   });
 });

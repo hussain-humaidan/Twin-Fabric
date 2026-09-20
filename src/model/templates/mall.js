@@ -1,7 +1,7 @@
 /**
- * Matam building template.
+ * Mall building template.
  *
- * This is the ONLY file in the codebase that knows what a Matam is. It is one
+ * This is the ONLY file in the codebase that knows what a Mall is. It is one
  * entry in the template registry; the platform, the data model and every
  * engineering module are completely generic.
  *
@@ -26,11 +26,11 @@ let templateRev = 900000;
 const W = 60;   // PLACEHOLDER building width  (X, east–west)
 const D = 40;   // PLACEHOLDER building depth  (Z, north–south)
 
-export function buildMatam(ids) {
+export function buildMall(ids) {
   const project = createEmptyProject(ids, {
-    name: 'Matam Infrastructure Project',
-    buildingName: 'Matam',
-    buildingType: 'matam',
+    name: 'Mall Infrastructure Project',
+    buildingName: 'Mall',
+    buildingType: 'mall',
   });
   project.building.notes = 'All dimensions are PLACEHOLDER values pending survey. Edit any level, wall, room or opening in Building mode.';
 
@@ -335,7 +335,7 @@ function seedInfrastructure(project, ids, ground, upper) {
   /* Hall 1 */
   const tv = place(instantiate(ids, 'tv', { name: 'Hall 1 main TV' }), 9, 2.3, 0.25, 'wall', 0);
   const bmdOut = place(instantiate(ids, 'bmd-sdi-hdmi', { name: 'Hall 1 SDI→HDMI converter' }), 10.6, 2.3, 0.35, 'wall', 0);
-  const pc = place(instantiate(ids, 'pc', { name: 'Hall 1 control PC', attributes: { hostname: 'matam-h1-pc', ip: '', mac: '', os: '', vlan: '' } }), 3.5, 0.25, 5.5, 'floor', 0);
+  const pc = place(instantiate(ids, 'pc', { name: 'Hall 1 control PC', attributes: { hostname: 'mall-h1-pc', ip: '', mac: '', os: '', vlan: '' } }), 3.5, 0.25, 5.5, 'floor', 0);
   const bmdIn = place(instantiate(ids, 'bmd-hdmi-sdi', { name: 'Hall 1 HDMI→SDI converter' }), 3.5, 0.75, 5.0, 'desk', 0);
   const ktx = place(instantiate(ids, 'kvm-tx', { name: 'Hall 1 KVM transmitter' }), 4.2, 0.75, 5.0, 'desk', 0);
   const skt1 = place(instantiate(ids, 'socket', { name: 'Hall 1 AV socket' }), 8.2, 0.4, 0.2, 'wall', 0);

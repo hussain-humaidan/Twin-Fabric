@@ -1,5 +1,5 @@
 /**
- * Matam Digital Twin — entry point.
+ * Twinfabric — entry point.
  *
  * Boot order: load (or generate) the project document → put it in the store →
  * build the UI and the 3D scene on top of it.
@@ -30,7 +30,7 @@ async function boot() {
     if (!project) {
       setBootMessage('Generating the building…');
       const ids = makeIdFactory({});
-      project = createFromTemplate('matam', ids);
+      project = createFromTemplate('mall', ids);
     }
 
     setProject(project, { label: 'Load' });
@@ -52,7 +52,6 @@ async function boot() {
 
     const app = createApp();
     window.twinfabric = { state, bus, EV, app, PRODUCT };   // handy for the console
-    window.matam = window.twinfabric;                        // legacy alias
 
     const setTitle = () => { document.title = NAMING.windowTitle(state.project); };
     setTitle();

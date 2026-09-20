@@ -338,8 +338,8 @@ export function makeScenario(ids, o = {}) {
  *
  * Three names live at three levels and must not be conflated:
  *   application  the software            (Twinfabric 0.2.0)
- *   project      this body of work       ("Matam Infrastructure Project")
- *   building     the physical thing      ("Matam Al-Zahra", an address)
+ *   project      this body of work       ("Mall Infrastructure Project")
+ *   building     the physical thing      ("Riverside Mall", an address)
  *
  * A project currently holds one building; `buildings` is reserved so a site
  * with several structures does not need a schema break.

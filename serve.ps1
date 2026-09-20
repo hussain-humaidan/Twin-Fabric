@@ -1,4 +1,4 @@
-# Minimal static file server for the Matam Digital Twin.
+# Minimal static file server for Twinfabric.
 #
 # This machine has no Node.js, Python or other toolchain, and the app uses ES
 # modules, which browsers refuse to load from file://. This serves the folder
@@ -47,7 +47,7 @@ $mime = @{
 }
 
 Write-Host ""
-Write-Host "  Matam Digital Twin" -ForegroundColor Yellow
+Write-Host "  Twinfabric" -ForegroundColor Yellow
 Write-Host ("  serving " + $Root)
 Write-Host ("  open    " + $prefix) -ForegroundColor Cyan
 Write-Host "  Ctrl+C to stop"

@@ -1,6 +1,6 @@
 /**
  * Generic building templates - a blank site and a plain two-storey office.
- * They exist to prove the engine is not Matam-shaped.
+ * They exist to prove the engine is not Mall-shaped.
  */
 import { createEmptyProject, makeLevel, makeSlab, makePathway } from '../schema.js';
 import { rect } from '../../core/math.js';

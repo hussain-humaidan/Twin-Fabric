@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.0] — 2026-09-20
 
-The release that turned a 3D visualisation into an editor, and a Matam-specific
+The release that turned a 3D visualisation into an editor, and a Mall-specific
 tool into a platform.
 
 ### Added
@@ -69,9 +69,9 @@ tool into a platform.
 ### Changed
 
 - `templates.js` (706 lines) split into `buildingKit.js` (generic
-  constructors) and `templates/{index,matam,generic}.js`. `templates/matam.js`
-  is now the only file that knows what a Matam is.
-- Renamed from "Matam Digital Twin" to **Twinfabric**.
+  constructors) and `templates/{index,mall,generic}.js`. `templates/mall.js`
+  is now the only file that knows what a Mall is.
+- Renamed to **Twinfabric**.
 - Autosave is asynchronous and flushes on `visibilitychange`/`pagehide`
   rather than `beforeunload`, which cannot complete an IndexedDB write.
 
@@ -112,7 +112,7 @@ Initial working version.
 - Scenario layers, status filters, cable type filters, X-ray, cutaway,
   per-level isolation and first-person walkthrough.
 - Equipment, cable, port and room schedules as CSV.
-- Matam building template: 5 halls, 3 rooms, 10 upper rooms, 2 clerks halls,
+- Mall building template: 5 halls, 3 rooms, 10 upper rooms, 2 clerks halls,
   11 clerk rooms, roof with plant and mast zones.
 
 [Unreleased]: https://github.com/hussain-humaidan/twinfabric/compare/v0.2.0...HEAD

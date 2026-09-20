@@ -17,7 +17,8 @@ import { auditProject } from '../logic/validate.js';
 import { renderPathSteps, highlightTrace, signalColor } from './chain.js';
 import { fmtLen, fmtArea, sortBy } from '../core/util.js';
 import {
-  cableScheduleCSV, equipmentScheduleCSV, portScheduleCSV, roomScheduleCSV, toJSON,
+  cableScheduleCSV, equipmentScheduleCSV, portScheduleCSV, roomScheduleCSV,
+  toJSON, exportFilename,
 } from '../persist/io.js';
 
 const SVGNS = 'http://www.w3.org/2000/svg';
@@ -600,7 +601,7 @@ export function openFloorPlan() {
 
 export function openExport() {
   const p = state.project;
-  showText('Project JSON', toJSON(p), { filename: 'matam-twin.json', mime: 'application/json' });
+  showText('Project JSON', toJSON(p), { filename: exportFilename(p), mime: 'application/json' });
 }
 
 export function openImport(onLoad) {

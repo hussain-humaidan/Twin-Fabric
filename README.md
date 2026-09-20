@@ -47,13 +47,13 @@ Three things, three names, never conflated:
 | Level | What it is | Example |
 | --- | --- | --- |
 | **Application** | the software | Twinfabric 0.2.0 |
-| **Project** | one body of work | "Matam Infrastructure Project" |
-| **Building** | the physical structure | "Matam", with an address |
+| **Project** | one body of work | "Mall Infrastructure Project" |
+| **Building** | the physical structure | "Mall", with an address |
 
 A **template** fills a new project with geometry. Shipped templates are a
-Matam, a generic two-storey office, and an empty site.
-[`src/model/templates/matam.js`](src/model/templates/matam.js) is the only file
-in the codebase that knows what a Matam is — the engine, the data model and
+Mall, a generic two-storey office, and an empty site.
+[`src/model/templates/mall.js`](src/model/templates/mall.js) is the only file
+in the codebase that knows what a Mall is — the engine, the data model and
 every engineering module are completely generic. Adding a school, warehouse,
 studio or mosque is one module and one registry entry.
 
@@ -136,7 +136,7 @@ to order against.
 
 ## PLACEHOLDER values
 
-**Nothing in the shipped Matam template is survey data.** The footprint, floor
+**Nothing in the shipped Mall template is survey data.** The footprint, floor
 heights, wall thicknesses, door sizes, tray routes and stair geometry are
 structured, named placeholders so they can be replaced field by field without
 touching code. The inspector lists every outstanding one; individual entities
@@ -167,8 +167,8 @@ entities.
   "application": { "name": "Twinfabric", "version": "0.2.0" },
   "schema": { "version": 3 },
   "meta": {
-    "name": "Matam Infrastructure Project",
-    "building": "Matam",
+    "name": "Mall Infrastructure Project",
+    "building": "Mall",
     "projectVersion": 12,
     "counts": { "levels": 3, "spaces": 44, "devices": 15, "cables": 18, "cableLength": 591.09 }
   },
