@@ -1,0 +1,63 @@
+<title>Twinfabric</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/app.css">
+
+<div id="app" class="app">
+  <header id="topbar" class="topbar"></header>
+
+  <aside id="left" class="panel panel-left">
+    <div class="panel-tabs" id="left-tabs"></div>
+    <div class="panel-body" id="left-body"></div>
+  </aside>
+
+  <main id="stage" class="stage">
+    <div id="viewport" class="viewport"></div>
+    <div id="viewport-overlay" class="viewport-overlay"></div>
+    <div id="view-cube" class="view-cube"></div>
+    <div id="tool-hint" class="tool-hint" hidden></div>
+    <div id="boot" class="boot">
+      <div class="boot-inner">
+        <div class="boot-title">TWINFABRIC</div>
+        <div class="boot-sub" id="boot-sub">Loading 3D engine…</div>
+      </div>
+    </div>
+  </main>
+
+  <aside id="right" class="panel panel-right">
+    <div class="panel-tabs" id="right-tabs"></div>
+    <div class="panel-body" id="right-body"></div>
+  </aside>
+
+  <footer id="statusbar" class="statusbar"></footer>
+</div>
+
+<div id="overlay-root" class="overlay-root"></div>
+<div id="menu-root"></div>
+<div id="toast-root" class="toast-root"></div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module" src="src/main.js"></script>
+<script>
+  // Surface hard failures (module load errors are otherwise silent).
+  window.addEventListener('error', function (e) {
+    var b = document.getElementById('boot-sub');
+    if (b && document.getElementById('boot') && !document.getElementById('boot').hidden) {
+      b.textContent = 'Failed to start: ' + (e.message || e.type);
+      b.className = 'boot-sub boot-error';
+    }
+  });
+  if (location.protocol === 'file:') {
+    var b = document.getElementById('boot-sub');
+    b.className = 'boot-sub boot-error';
+    b.innerHTML = 'This app uses ES modules and cannot run from file://.<br>Serve the folder over HTTP, or open the published link.';
+  }
+</script>

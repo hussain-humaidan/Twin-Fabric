@@ -1,0 +1,53 @@
+{
+  "name": "twinfabric",
+  "version": "0.2.0",
+  "description": "Open-source 3D digital twin and infrastructure planning platform",
+  "type": "module",
+  "license": "AGPL-3.0-only",
+  "author": "Hussain Humaidan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hussain-humaidan/twinfabric.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hussain-humaidan/twinfabric/issues"
+  },
+  "homepage": "https://github.com/hussain-humaidan/twinfabric#readme",
+  "keywords": [
+    "digital-twin",
+    "bim",
+    "three.js",
+    "infrastructure",
+    "cable-management",
+    "av",
+    "network-documentation",
+    "building-editor"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "check": "npm run lint && npm run typecheck && npm run test"
+  },
+  "dependencies": {
+    "three": "0.169.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/three": "0.169.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.17.0",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  }
+}

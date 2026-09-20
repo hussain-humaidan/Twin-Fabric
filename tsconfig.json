@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "allowJs": true,
+
+    /* checkJs is OFF for now, deliberately.
+     *
+     * The codebase is ~9,000 lines of JSDoc-annotated JavaScript. Turning
+     * checkJs on in one go produces hundreds of findings and blocks CI on day
+     * one, which helps nobody. The migration path is incremental and tracked
+     * in CONTRIBUTING.md:
+     *
+     *   1. src/types/twinfabric.d.ts declares the domain model (done)
+     *   2. enable checkJs per directory with // @ts-check file pragmas
+     *   3. convert module-by-module to .ts, innermost layer first:
+     *      core → model → logic → persist → three → ui
+     *
+     * Do not flip this to true without doing step 2 first.
+     */
+    "checkJs": false,
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "exactOptionalPropertyTypes": false,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "types": ["vitest/globals"]
+  },
+  "include": ["src/**/*", "tests/**/*", "vite.config.js"],
+  "exclude": ["node_modules", "dist"]
+}

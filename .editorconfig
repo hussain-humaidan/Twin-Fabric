@@ -1,0 +1,19 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.ps1]
+end_of_line = crlf
+# Windows PowerShell 5.1 reads .ps1 as ANSI when there is no BOM, and some
+# UTF-8 bytes decode to smart quotes that the parser treats as string
+# delimiters. Keep PowerShell scripts ASCII-only.
+charset = utf-8
