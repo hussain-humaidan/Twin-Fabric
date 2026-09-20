@@ -19,10 +19,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          # Re-enable once package-lock.json is committed. Until then this
+          # step fails outright: setup-node errors if it cannot find a
+          # dependency lock file.
+          # cache: npm
 
       - name: Install
-        run: npm ci
+        # `npm ci` requires a lockfile. Once you have run `npm install` locally
+        # and committed package-lock.json, switch this back to `npm ci` for
+        # reproducible builds, and re-enable the cache above.
+        run: npm install --no-audit --no-fund
 
       - name: Lint
         run: npm run lint
@@ -60,8 +66,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
+      - run: npm install --no-audit --no-fund
       - run: npm run build
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
